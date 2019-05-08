@@ -1,0 +1,124 @@
+﻿@model DEMO5.Models.TItemSourceList
+
+@{
+    ViewData["Title"] = "新建";
+}
+
+<h4>采集源列表 >> 新建</h4>
+
+<hr />  
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Valid" class="control-label" style="color:red;"></label>
+                <input asp-for="Valid" class="form-control" value="true"/>
+                <span asp-validation-for="Valid" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="WdId" class="control-label" style="color:red;"></label>
+                <input asp-for="WdId" class="form-control"  />
+                <span asp-validation-for="WdId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Class" class="control-label"></label>
+                <input asp-for="Class" class="form-control" value="1" />
+                <span asp-validation-for="Class" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SourceName" class="control-label" style="color:red;"></label>
+                <input asp-for="SourceName" class="form-control" />
+                <span asp-validation-for="SourceName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SourceUrl" class="control-label" style="color:red;"></label>
+                <input asp-for="SourceUrl" class="form-control" />
+                <span asp-validation-for="SourceUrl" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="GatherUrl" class="control-label" style="color:red;"></label>
+                <input asp-for="GatherUrl" class="form-control" />
+                <span asp-validation-for="GatherUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstPage" class="control-label" style="color:red;"></label>
+                <input asp-for="FirstPage" class="form-control" />
+                <span asp-validation-for="FirstPage" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="GatherPages" class="control-label" style="color:red;"></label>
+                <input asp-for="GatherPages" class="form-control" />
+                <span asp-validation-for="GatherPages" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InfoUrl" class="control-label" style="color:red;"></label>
+                <input asp-for="InfoUrl" class="form-control" />
+                <span asp-validation-for="InfoUrl" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ListPattern" class="control-label" style="color:red;"></label>
+                <input asp-for="ListPattern" class="form-control" />
+                <span asp-validation-for="ListPattern" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="IsGenericGatherUrl" class="control-label"></label>
+                <input asp-for="IsGenericGatherUrl" class="form-control" value="true" />
+                <span asp-validation-for="IsGenericGatherUrl" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="ListP1" class="control-label"></label>
+                <input asp-for="ListP1" class="form-control" />
+                <span asp-validation-for="ListP1" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ListP2" class="control-label"></label>
+                <input asp-for="ListP2" class="form-control" />
+                <span asp-validation-for="ListP2" class="text-danger"></span>
+            </div>
+
+
+
+
+
+
+            <div class="form-group">
+                <label asp-for="ListBegin" class="control-label"></label>
+                <input asp-for="ListBegin" class="form-control" />
+                <span asp-validation-for="ListBegin" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ListEnd" class="control-label"></label>
+                <input asp-for="ListEnd" class="form-control" />
+                <span asp-validation-for="ListEnd" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <input type="submit" value="新建" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">返回列表</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

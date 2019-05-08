@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>cc</title>
+    <style type="text/css">
+        span {
+            margin-right:200px;
+        }
+        .span1 {
+            display: inline-block;
+            width: 60px;
+            word-break: normal;/*让浏览器默认换行规则，只有当某个单词长度大于固定宽度60px时，此行才会隐藏1*/
+            overflow: hidden;
+            text-overflow: ellipsis;/*  ★★★文本溢出包含元素时，用省略号代替多余的文本*/
+            color:red;
+        }
+
+            .span1:hover {
+                overflow: visible;
+            }
+
+        .span2 {
+            display: inline-block;
+            width: 60px;
+            word-break: keep-all;/*     ★★★只能在半角空格或连字符处换行,达到用标点符号换行，超过隐藏效果*/
+            overflow: hidden;
+            text-overflow: clip;/*      ★★★文本溢出包含元素时，修剪多余的文本*/
+            color:green;
+             }
+
+            .span2:hover {
+                overflow: visible;
+            }
+
+              .span3 {
+            display: inline-block;
+            width: 60px;
+            word-break: break-all;/*    ★★★允许在单词内换行，超过长度就换行,永远不会超过固定宽度60px，无法达到隐藏效果*/
+            overflow: hidden;
+            text-overflow: "hhh";
+            color:blue;
+        }
+
+            .span3:hover {
+                overflow: visible;
+            }
+
+
+             .span4 {
+            display: inline-block;
+            width: 60px;
+            word-break: keep-all;/*只能在半角空格或连字符处换行,达到用标点符号换行，超过隐藏效果*/
+            overflow: hidden;
+            /*text-overflow: "hhh";*//*文本溢出包含元素时，用省略号代替多余的文本*/
+            color:green;
+             }
+
+            .span4:hover {
+                overflow: visible;
+            }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <span class="span1">
+            1.OA升级会导致帆软初始化目录，自己定义的脚本文件夹【usersdata】需要复制到项目里.
+        </span>
+        <span class="span2">
+            1.OA升级会导致帆软初始化目录，自己定义的脚本文件夹【usersdata】需要复制到项目里.
+        </span>
+        <span class="span3">
+            1.OA升级会导致帆软初始化目录，自己定义的脚本文件夹【usersdata】需要复制到项目里.
+        </span>
+
+        <span class="span4">
+            1.OA升级会导致帆软初始化目录，自己定义的脚本文件夹【usersdata】需要复制到项目里.
+        </span>
+    </div>
+</body>
+</html>

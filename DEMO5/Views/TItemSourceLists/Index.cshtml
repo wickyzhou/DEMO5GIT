@@ -1,0 +1,100 @@
+﻿@*@model IEnumerable<DEMO5.Models.TItemSourceList>*@
+
+@model DEMO5.Models.ListViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>采集源列表</h4>
+
+<form asp-controller="TITEMSOURCELISTS" asp-action="Index" method="get">
+    <div class="params" id="params">
+        <div class="select">
+            <p>
+                采集源ID: <input type="text" asp-for="Id" />
+            </p>
+            <p>  采集栏目: <input type="text" asp-for="SearchSourceName" /></p>
+            <p> 采集网址：<select asp-for="IsGatherUrlNull" asp-items="Model.GatherUrls"></select></p>
+            <p> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></p>
+            <p> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></p>
+            <p> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></p>
+            <p> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></p>
+
+            <p><input type="submit" value="查询" /></p>
+
+
+        </div>
+        <div class="create"> <a asp-action="Create">【 新 增 】</a> </div>
+    </div>
+   
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            @*<th width="10">
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th width="20">
+            @Html.DisplayNameFor(model => model.SourceName)
+        </th>
+        <th width="80">
+            @Html.DisplayNameFor(model => model.SourceUrl)
+        </th>
+        <th width="10">
+            @Html.DisplayNameFor(model => model.GatherUrl)
+        </th>
+        <th width="20">点击修改</th>*@
+
+
+            @*     增加视图过滤模型层后，需要更改的地方之一：模型改为视图后，相当于原始表只属于其的一个集合，所以用下标访问后才是原始模型数据     *@
+            <th class="w-80px">
+                @Html.DisplayNameFor(model => model.lists[0].Id)
+            </th>
+            <th class="w-15">
+                @Html.DisplayNameFor(model => model.lists[0].SourceName)
+            </th>
+            <th class="w-15">
+                @Html.DisplayNameFor(model => model.lists[0].SourceUrl)
+            </th>
+            <th class="w-15">
+                @Html.DisplayNameFor(model => model.lists[0].GatherUrl)
+            </th>
+            <th class="w-80px">
+                @Html.DisplayNameFor(model => model.lists[0].ModifyDate)
+            </th>
+            <th class="w-150px">点击修改</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*  增加视图过滤模型层后，需要更改的地方之二：将Model改变为Model.lists(代表的是原始模型表)   *@
+        @foreach (var item in Model.lists)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+
+            <td class="tdleft">
+                @Html.DisplayFor(modelItem => item.SourceName)
+            </td>
+            <td class="tdleft">
+                <a href=@Html.DisplayFor(modelItem => item.SourceUrl) target="_blank"> @Html.DisplayFor(modelItem => item.SourceUrl)</a>
+            </td>
+            <td class="tdleft">
+                @Html.DisplayFor(modelItem => item.GatherUrl)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifyDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">编辑</a>  |
+                <a asp-action="Details" asp-route-id="@item.Id">详情</a>   |
+                <a asp-action="Delete" asp-route-id="@item.Id">删除</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,203 @@
+﻿@model DEMO5.Models.TItemSourceList
+
+@{
+    ViewData["Title"] = "编辑";
+}
+
+@*<h1>编辑</h1>*@
+
+    <h4>采集列表 >> 编辑</h4>
+<hr />
+<div class="row">
+    @*<div class="col-md-4">*@
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="t">
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Valid" class="c" style="color:red;"></label>
+                <input asp-for="Valid" class="f" />
+                <span asp-validation-for="Valid" class="t"></span>
+            </div>
+
+            @*<input type="hidden" asp-for="Id" />*@
+            <div style="text-align:center;margin-right:50px;">
+                <label class="c">  采集源ID： </label>
+                <input class="f" readonly="readonly" asp-for="Id" />
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="GatherUrl" class="c" style="color:red;"></label>
+                <input asp-for="GatherUrl" class="f" />
+                <span asp-validation-for="GatherUrl" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="InfoUrl" class="c" style="color:red;"></label>
+                <input asp-for="InfoUrl" class="f" />
+                <span asp-validation-for="InfoUrl" class="t"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="SourceName" class="c" style="color:red;"></label>
+                <input asp-for="SourceName" class="f" />
+                <span asp-validation-for="SourceName" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FirstPage" class="c" style="color:green;"></label>
+                <input asp-for="FirstPage" class="f" />
+                <span asp-validation-for="FirstPage" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FirstPageRatio" class="c" style="color:green;"></label>
+                <input asp-for="FirstPageRatio" class="f" />
+                <span asp-validation-for="FirstPageRatio" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FirstPagePlus" class="c" style="color:green;"></label>
+                <input asp-for="FirstPagePlus" class="f" />
+                <span asp-validation-for="FirstPagePlus" class="t"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="GatherPages" class="c" style="color:green;"></label>
+                <input asp-for="GatherPages" class="f" />
+                <span asp-validation-for="GatherPages" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ListIspost" class="c" style="color:red;"></label>
+                <input asp-for="ListIspost" class="f" />
+                <span asp-validation-for="ListIspost" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ListPattern" class="c" style="color:red;"></label>
+                <input asp-for="ListPattern" class="f" />
+                <span asp-validation-for="ListPattern" class="t"></span>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="form-group">
+                <label asp-for="Userid" class="c"></label>
+                <input asp-for="Userid" class="f" readonly="readonly" />
+                <span asp-validation-for="Userid" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpcId" class="c"></label>
+                <input asp-for="OpcId" class="f" readonly="readonly" />
+                <span asp-validation-for="OpcId" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class" class="c"></label>
+                <input asp-for="Class" class="f" />
+                <span asp-validation-for="Class" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WdId" class="c"></label>
+                <input asp-for="WdId" class="f" />
+                <span asp-validation-for="WdId" class="t"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="SourceUrl" class="c"></label>
+                <input asp-for="SourceUrl" class="f" />
+                <span asp-validation-for="SourceUrl" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ListP1" class="c"></label>
+                <input asp-for="ListP1" class="f" />
+                <span asp-validation-for="ListP1" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ListP2" class="c"></label>
+                <input asp-for="ListP2" class="f" />
+                <span asp-validation-for="ListP2" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParamResidual" class="c"></label>
+                <input asp-for="ParamResidual" class="f" />
+                <span asp-validation-for="ParamResidual" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TotalPages" class="c"></label>
+                <input asp-for="TotalPages" class="f" />
+                <span asp-validation-for="TotalPages" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsGatherAllPages" class="c"></label>
+                <input asp-for="IsGatherAllPages" class="f" />
+                <span asp-validation-for="IsGatherAllPages" class="t"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ListCharset" class="c"></label>
+                <input asp-for="ListCharset" class="f" />
+                <span asp-validation-for="ListCharset" class="t"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="IsGatherInfopages" class="c"></label>
+                <input asp-for="IsGatherInfopages" class="f" />
+                <span asp-validation-for="IsGatherInfopages" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Addtime" class="c"></label>
+                <input asp-for="Addtime" class="f" />
+                <span asp-validation-for="Addtime" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CntPerPage" class="c"></label>
+                <input asp-for="CntPerPage" class="f" />
+                <span asp-validation-for="CntPerPage" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsGenericGatherUrl" class="c"></label>
+                <input asp-for="IsGenericGatherUrl" class="f" />
+                <span asp-validation-for="IsGenericGatherUrl" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ListBegin" class="c"></label>
+                <input asp-for="ListBegin" class="f" />
+                <span asp-validation-for="ListBegin" class="t"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ListEnd" class="c"></label>
+                <input asp-for="ListEnd" class="f" />
+                <span asp-validation-for="ListEnd" class="t"></span>
+            </div>
+
+            <div class="form-group" style="margin-left:50px;">
+                <input type="submit" value="保存" class="btn btn-primary" style="width:100px;height:35px;" />
+            </div>
+        </form>
+    @*</div>*@
+</div>
+
+<div>
+    <a asp-action="Index">返回上级</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

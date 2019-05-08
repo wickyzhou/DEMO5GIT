@@ -1,0 +1,164 @@
+﻿@model DEMO5.Models.TItemSourceList
+
+@{
+    ViewData["Title"] = "删除";
+}
+
+
+<h3 style="color:red;">确认删除 ？？？</h3>
+<div>
+    <h4>采集源列表 >> 删除</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Valid)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.Valid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OpcId)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.OpcId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WdId)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.WdId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SourceName)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.SourceName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SourceUrl)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.SourceUrl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GatherUrl)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.GatherUrl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ListP1)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.ListP1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ListP2)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.ListP2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParamResidual)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.ParamResidual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstPage)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.FirstPage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GatherPages)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.GatherPages)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalPages)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.TotalPages)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsGatherAllPages)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.IsGatherAllPages)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ListPattern)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.ListPattern)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ListCharset)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.ListCharset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InfoUrl)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.InfoUrl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ListIspost)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.ListIspost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsGatherInfopages)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.IsGatherInfopages)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Addtime)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.Addtime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CntPerPage)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.CntPerPage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsGenericGatherUrl)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.IsGenericGatherUrl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ListBegin)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.ListBegin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ListEnd)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.DisplayFor(model => model.ListEnd)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="删除 " class="btn btn-danger" />  |
+        <a asp-action="Index">   返回列表</a>
+    </form>
+</div>

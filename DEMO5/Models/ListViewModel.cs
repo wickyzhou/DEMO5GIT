@@ -22,5 +22,7 @@ namespace DEMO5.Models
 
         //此属性名称必须和控制器的参数名称一致，输入参数值做对应查询的时候，才会自动绑定到界面上
         public string SearchGatherUrl { get; set; }
+
+   
     }
 }

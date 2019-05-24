@@ -10,21 +10,21 @@
 <form asp-controller="TITEMSOURCELISTS" asp-action="Index" method="get">
     <div class="params" id="params">
         <div class="select">
-            <p>
+            <div>
                 采集源ID: <input type="text" asp-for="Id" />
-            </p>
-            <p>  采集栏目: <input type="text" asp-for="SearchSourceName" /></p>
-            <p> 采集网址：<select asp-for="IsGatherUrlNull" asp-items="Model.GatherUrls"></select></p>
-            <p> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></p>
-            <p> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></p>
-            <p> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></p>
-            <p> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></p>
+            </div>
+            <div>  采集栏目匹配: <input type="text" asp-for="SearchSourceName" /></div>
+            <div> 采集网址匹配：<select asp-for="IsGatherUrlNull" asp-items="Model.GatherUrls"></select></div>
+            @*<div> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></div>
+            <div> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></div>
+            <div> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></div>
+            <div> 采集网址Url：<input type="text" asp-for="SearchGatherUrl" /></div>*@
 
-            <p><input type="submit" value="查询" /></p>
+            <div style="margin:auto auto;"><input type="submit" value="查询" style="width:60px;height:inherit;padding:0;display:block;height:30px;" /></div>
 
 
         </div>
-        <div class="create"> <a asp-action="Create">【 新 增 】</a> </div>
+        <div class="create"> <a asp-action="Create"> 新 增 </a> </div>
     </div>
    
 </form>

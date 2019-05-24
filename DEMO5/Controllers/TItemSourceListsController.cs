@@ -23,14 +23,16 @@ namespace DEMO5.Controllers
         //{
         //    return View(await _context.TItemSourceList.ToListAsync());
         //}
-        public async Task<IActionResult> Index(int? id, string searchSourceName, string isGatherUrlNull, string searchGatherURL)
+        public async Task<IActionResult> Index(int? id, string searchSourceName, string isGatherUrlNull, string searchGatherURL,string sortOrder,int? pageNumber)
         {
+
+            ViewData["CurrentSort"] = sortOrder;
+   
+
             IQueryable<TItemSourceList> data = from m in _context.TItemSourceList
-                                               //where m.GatherUrl == null
-                                               //orderby m.Id descending
                                                select m;
 
-
+            
             if (id > 0)
             {
                 data = data.Where(s => s.Id == id);
@@ -54,11 +56,15 @@ namespace DEMO5.Controllers
                 data = data.Where(m => m.GatherUrl.Contains(searchGatherURL));
             }
 
-
+            //为界面下拉框，填充值，以便初始化ListsViewModel,将值显示在界面上
             List<string> listItem = new List<string>();
-            listItem.Add("所有"); listItem.Add("未填写"); listItem.Add("已填写");
-             var listviewmodel = new ListViewModel
-            {
+            listItem.Add("未填写");  listItem.Add("已填写"); listItem.Add("所有");
+
+
+
+
+            var listviewmodel = new ListViewModel
+            {    
                 lists = await data.ToListAsync(),
                 GatherUrls = new SelectList(listItem)
             };
@@ -191,5 +197,6 @@ namespace DEMO5.Controllers
         {
             return _context.TItemSourceList.Any(e => e.Id == id);
         }
+
     }
 }

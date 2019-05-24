@@ -66,3 +66,4 @@ C:\2019PRO\DEMO5GIT\DEMO5\obj\Debug\netcoreapp2.2\DEMO5.Views.pdb
 C:\2019PRO\DEMO5GIT\DEMO5\obj\Debug\netcoreapp2.2\DEMO5.dll
 C:\2019PRO\DEMO5GIT\DEMO5\obj\Debug\netcoreapp2.2\DEMO5.pdb
 C:\2019PRO\DEMO5GIT\DEMO5\obj\Debug\netcoreapp2.2\DEMO5.csproj.CopyComplete
+C:\2019PRO\DEMO5GIT\DEMO5\obj\Debug\netcoreapp2.2\DEMO5.csprojAssemblyReference.cache
